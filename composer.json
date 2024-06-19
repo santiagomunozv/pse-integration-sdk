@@ -1,0 +1,16 @@
+{
+    "name": "pse/integration-sdk",
+    "type": "library",
+    "description": "SDK for PSE integration",
+    "require": {
+        "php": "^7.2.5",
+        "sop/jwx": "^0.11.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "netresearch/jsonmapper": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "PSEIntegration\\": "src/"
+        }
+    }
+}
