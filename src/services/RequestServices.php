@@ -3,7 +3,7 @@
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
 
-namespace PSEIntegration\services;
+namespace PSEIntegration\Services;
 
 class RequestServices
 {

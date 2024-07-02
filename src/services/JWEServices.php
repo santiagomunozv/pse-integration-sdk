@@ -1,6 +1,6 @@
 <?php
 
-namespace PSEIntegration\services;
+namespace PSEIntegration\Services;
 
 use Sop\JWX\JWE\EncryptionAlgorithm\A256GCMAlgorithm;
 use Sop\JWX\JWE\KeyAlgorithm\RSAESKeyAlgorithm;
