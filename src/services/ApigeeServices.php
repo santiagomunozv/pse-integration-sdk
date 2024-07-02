@@ -1,18 +1,18 @@
 <?php
 
-namespace PSEIntegration\Services;
+namespace PSEIntegration\services;
 
-use \PSEIntegration\Services\RequestServices;
-use \PSEIntegration\Services\JWEServices;
-use \PSEIntegration\Models\GetBankListRequest;
-use \PSEIntegration\Models\CreateTransactionPaymentRequest;
-use \PSEIntegration\Models\CreateTransactionPaymentResponse;
-use \PSEIntegration\Models\FinalizeTransactionPaymentRequest;
-use \PSEIntegration\Models\FinalizeTransactionPaymentResponse;
-use \PSEIntegration\Models\TransactionInformationRequest;
-use \PSEIntegration\Models\TransactionInformationResponse;
+use \PSEIntegration\services\RequestServices;
+use \PSEIntegration\services\JWEServices;
+use \PSEIntegration\models\GetBankListRequest;
+use \PSEIntegration\models\CreateTransactionPaymentRequest;
+use \PSEIntegration\models\CreateTransactionPaymentResponse;
+use \PSEIntegration\models\FinalizeTransactionPaymentRequest;
+use \PSEIntegration\models\FinalizeTransactionPaymentResponse;
+use \PSEIntegration\models\TransactionInformationRequest;
+use \PSEIntegration\models\TransactionInformationResponse;
 
-use \PSEIntegration\Models\Bank;
+use \PSEIntegration\models\Bank;
 
 class ApigeeServices
 {
@@ -21,7 +21,7 @@ class ApigeeServices
     private $apigeeClientSecret;
 
     private $apigeeOrganizationProdUrl;
-    
+
     private $apigeeDirectoryUrl;
 
     private $apigeeEncryptKey;
@@ -94,7 +94,7 @@ class ApigeeServices
 
     private function post(string $method, string $content)
     {
-        $subDirectorio = ($this->apigeeDirectoryUrl == "") ? "": $this->apigeeDirectoryUrl."/";
+        $subDirectorio = ($this->apigeeDirectoryUrl == "") ? "" : $this->apigeeDirectoryUrl . "/";
         $path = $subDirectorio . "psewebapinf/api/" . $method . "?apikey=" . $this->apigeeClientId;
         $this->auth = "Bearer " . ApigeeServices::$apigeeToken;
 
@@ -116,7 +116,7 @@ class ApigeeServices
             throw e;
         }
     }
-    
+
 
     private function sendRequest(string $method, Object $message, $type)
     {

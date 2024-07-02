@@ -1,6 +1,6 @@
 <?php
 
-namespace PSEIntegration\Services;
+namespace PSEIntegration\services;
 
 use Sop\JWX\JWE\EncryptionAlgorithm\A256GCMAlgorithm;
 use Sop\JWX\JWE\KeyAlgorithm\RSAESKeyAlgorithm;
@@ -21,7 +21,7 @@ use Sop\JWX\JWK\JWKSet;
 class JWEServices
 {
     private const GCM_TAG_LENGTH = 16; // GCM tag length in bytes
-    
+
     public static function processEncrypt(string $message, string $key, string $customerIV)
     {
         $encString = JWEServices::encrypt($message, $key, $customerIV);

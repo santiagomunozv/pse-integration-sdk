@@ -1,6 +1,6 @@
 <?php
 
-namespace PSEIntegration\Models;
+namespace PSEIntegration\models;
 
 class CreateTransactionPaymentRequest
 {
@@ -82,8 +82,7 @@ class CreateTransactionPaymentRequest
         string $beneficiaryEntityIdentification,
         string $beneficiaryEntityName,
         string $beneficiaryEntityCIIUCategory
-    )
-    {
+    ) {
         $this->entityCode = $entityCode;
         $this->financialInstitutionCode = $financialInstitutionCode;
         $this->serviceCode = $serviceCode;

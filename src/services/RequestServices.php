@@ -3,11 +3,11 @@
 use GuzzleHttp\Client;
 use Psr\Http\Message\ResponseInterface;
 
-namespace PSEIntegration\Services;
+namespace PSEIntegration\services;
 
 class RequestServices
 {
-    private static function getHttpClient($url, int $timeout, string $certFile, string $certPassword, bool $certIgnoreInvalid) : \GuzzleHttp\Client
+    private static function getHttpClient($url, int $timeout, string $certFile, string $certPassword, bool $certIgnoreInvalid): \GuzzleHttp\Client
     {
         $config = [
             'base_uri' => $url,
@@ -25,7 +25,7 @@ class RequestServices
         return new \GuzzleHttp\Client($config);
     }
 
-    public static function doPostAPICall(int $timeout, string $url, string $method, string $content, string $auth, string $certFile, string $certPassword, bool $certIgnoreInvalid) : string
+    public static function doPostAPICall(int $timeout, string $url, string $method, string $content, string $auth, string $certFile, string $certPassword, bool $certIgnoreInvalid): string
     {
         $client = RequestServices::getHttpClient($url, $timeout, $certFile, $certPassword, $certIgnoreInvalid);
 
@@ -50,7 +50,7 @@ class RequestServices
         }
     }
 
-    public static function doPostFormAPICall(int $timeout, string $url, string $method, array $form, string $auth, string $certFile, string $certPassword, bool $certIgnoreInvalid) : string
+    public static function doPostFormAPICall(int $timeout, string $url, string $method, array $form, string $auth, string $certFile, string $certPassword, bool $certIgnoreInvalid): string
     {
         $client = RequestServices::getHttpClient($url, $timeout, $certFile, $certPassword, $certIgnoreInvalid);
 

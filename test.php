@@ -3,13 +3,13 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use \PSEIntegration\PSEIntegration;
-use \PSEIntegration\Models\GetBankListRequest;
-use \PSEIntegration\Models\CreateTransactionPaymentRequest;
-use \PSEIntegration\Models\CreateTransactionPaymentResponse;
-use \PSEIntegration\Models\FinalizeTransactionPaymentRequest;
-use \PSEIntegration\Models\FinalizeTransactionPaymentResponse;
-use \PSEIntegration\Models\TransactionInformationRequest;
-use \PSEIntegration\Models\TransactionInformationResponse;
+use \PSEIntegration\models\GetBankListRequest;
+use \PSEIntegration\models\CreateTransactionPaymentRequest;
+use \PSEIntegration\models\CreateTransactionPaymentResponse;
+use \PSEIntegration\models\FinalizeTransactionPaymentRequest;
+use \PSEIntegration\models\FinalizeTransactionPaymentResponse;
+use \PSEIntegration\models\TransactionInformationRequest;
+use \PSEIntegration\models\TransactionInformationResponse;
 
 /*
 # Apigee data
@@ -23,7 +23,7 @@ encryptIV = "T0JFKG5TF5KTLKHU"
 # Store data
 entityCode = "0123456789"
 serviceCode = "6101"
-*/ 
+*/
 
 // Apigee data unisys environment
 // $apigeeOrganizationProdUrl = "https://fredyvanegas-eval-prod.apigee.net";
