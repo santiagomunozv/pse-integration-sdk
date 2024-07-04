@@ -2,14 +2,14 @@
 
 namespace PSEIntegration;
 
-use \PSEIntegration\services\ApigeeServices;
-use \PSEIntegration\models\GetBankListRequest;
-use \PSEIntegration\models\CreateTransactionPaymentRequest;
-use \PSEIntegration\models\CreateTransactionPaymentResponse;
-use \PSEIntegration\models\FinalizeTransactionPaymentRequest;
-use \PSEIntegration\models\FinalizeTransactionPaymentResponse;
-use \PSEIntegration\models\TransactionInformationRequest;
-use \PSEIntegration\models\TransactionInformationResponse;
+use \PSEIntegration\Services\ApigeeServices;
+use \PSEIntegration\Models\GetBankListRequest;
+use \PSEIntegration\Models\CreateTransactionPaymentRequest;
+use \PSEIntegration\Models\CreateTransactionPaymentResponse;
+use \PSEIntegration\Models\FinalizeTransactionPaymentRequest;
+use \PSEIntegration\Models\FinalizeTransactionPaymentResponse;
+use \PSEIntegration\Models\TransactionInformationRequest;
+use \PSEIntegration\Models\TransactionInformationResponse;
 
 class PSEIntegration
 {

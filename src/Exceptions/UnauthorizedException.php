@@ -1,6 +1,6 @@
 <?php
 
-namespace PSEIntegration\exceptions;
+namespace PSEIntegration\Exceptions;
 
 class UnauthorizedException extends \RuntimeException
 {
